@@ -1,0 +1,41 @@
+body{
+    /* for 3d animation */
+    perspective: 300px;
+}
+img{
+    width: 300px;
+    height: auto;
+    margin: auto;
+    display: block;
+    margin-top: 100px;
+    transition: transform 2s;
+    /* transform-origin: top left; */
+}
+img:hover{
+    /* translate(right,bottom) */
+    /* transform: translate(-200px,200px);  */
+    
+    /* x=how much width will be increase
+    relative to original size
+    y=height */
+    /* we can use only one value too */
+    /* to big the image give value >1
+    for small image give value <1 */
+    /* transform: scale(2.2); */
+
+     /* transform: rotate(45deg);  */
+
+    /* skew(horizontal,vertical) */
+    /* transform: skew(20deg,30deg); */
+ 
+
+    /* For 3D animation we have to add 'perspective'
+    on the container of the element */
+    /* transform: translateZ(100px); */
+
+     
+    /* transform: rotateZ(50deg) ->same as rotate(50deg)*/
+
+    /* transform: rotateX(60deg); */
+    transform: rotateY(60deg)
+}

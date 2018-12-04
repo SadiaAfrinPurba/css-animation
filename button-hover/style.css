@@ -1,0 +1,192 @@
+/* COMMON SETUP */
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; 
+}
+
+a{
+    text-decoration: none;
+    width: 20%;
+    padding: 5px 5px;
+    font-size: 45px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-right: 10px;
+    border: 3px solid #351435;
+    transition: all 1s;
+    letter-spacing: 2px;
+    color:#272727;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    
+}
+.rotate:before,
+.swipe:before,
+.plus:before{
+    content: " ";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all 1s;
+    background-color: #351435;
+}
+
+a:hover{
+    color: white;
+}
+
+/* 1st-ROTATE EFFECT*/
+
+.rotate:before{
+    content: " ";
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    
+    
+}
+.rotate:hover:before{
+    transform: rotate(0deg);
+    
+}
+
+/* 2nd-SWIPE EFFEECT*/
+
+.swipe:before{
+    transform: translateX(-100%);
+}
+.swipe:hover:before{
+    transform: translateX(0);
+}
+
+
+/* 3rd Plus hover */
+
+.plus:before{
+    content: " ";
+    transform: rotateX(90deg);
+}
+.plus:after{
+    content: " ";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: all 1s;
+    background-color: #351435;
+    transform: rotateY(90deg);
+}
+.plus:hover:before{
+    transform: rotateX(0);
+}
+
+.plus:hover:after{
+    transform: rotateY(0);
+}
+
+/*4th*/
+
+.psudo-content:before{
+    content: "Nice";
+    color: white;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #351435;
+    transform: translateY(-100%);
+    transition: all 1s;
+    /* for centering the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.psudo-content:hover:before{
+    transform: translateY(0);
+}
+
+/* 5th-ROTATE AND BACKGROUND COLOR CHANGE */
+
+.rotate-color:before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color:#cd7bcd ;
+    transform: translateX(-100%) rotate(45deg);
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.rotate-color:hover:before{
+    transform: translateX(100%) rotate(45deg);
+}
+.rotate-color:hover{
+    background-color: #351435;
+}
+
+/* 6th-BEFORE AFTER */
+.before-after{
+    color: transparent;
+}
+.before-after::before,
+.before-after::after{
+    content: "Hover";
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color:#351435;
+    color:  #cd7bcd;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.before-after::after{
+    content: "Nice";
+}
+.before-after:after{
+    transform: translate(-100%,100%);
+}
+.before-after:hover::before{
+    transform: translate(100%,-100%);
+}
+.before-after:hover::after{
+    transform: translate(0,0);
+}
+
+/* 7th-SCALE EFFECT */
+
+.scale::before{
+    content: "Hover";
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color:#351435;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(5);
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+.scale:hover::before{
+    transform: scale(1);
+    opacity: 1;
+    color: white;
+}
