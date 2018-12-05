@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    background-color: #59afed;
+    /* for 3d loading */
+    /* perspective: 200px; */
+    height: 100vh;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    text-shadow: 0 1px 0 #efefef,
+                 0 2px 0 #efefef,
+                 0 3px 0 #efefef,
+                 0 4px 0 #efefef,
+                 0 30px 5px rgba(0,0,0,0.1);
+    animation: floating 1s linear infinite;
+    animation-direction: alternate;
+
+}
+@keyframes floating{
+    from {transform: rotate(5deg);}
+    to {transform: rotate(-5deg);}
+}
+
+
+/* LOADING ANIMATION
+.loading{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 36px;;
+    margin-top:30px;
+    animation: loading 3s linear infinite;
+    
+} */
+
+/* @keyframes loading{
+
+    0% {transform:rotateX(0) rotateY(0);}
+    50% {transform: rotateX(0) rotateY(180deg);}
+    100% {transform: rotateX(180deg) rotateY(180deg);}
+
+} */
+
+
+/* SMILEY */
+/* .smiley{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    padding: 0;
+    margin: 10px;
+
+    
+    
+}
+.round{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top:30px;
+ 
+    float: left;
+    margin: 25px 20px;
+    text-align: center;
+   
+   
+    animation: eyes 2s linear infinite;
+    animation-direction: reverse;
+    
+}
+.curve{
+    width: 140px;
+    height: 100px; 
+    border-bottom: 2px solid white;
+    border-radius:50%;
+    animation: mouth 5s ease-in 2 forwards;
+}
+@keyframes eyes{
+    0%{background-color:white;}
+   
+    100%{background-color:#ddd;}
+
+}
+@keyframes mouth{
+    from {border-bottom: 2px solid white;}
+    to {border-bottom: 50px solid #ddd;}
+} */

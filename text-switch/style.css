@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23654d;
+}
+h1{
+    color: white;
+    
+}
+span::before{
+    content: " 1Q84";
+    text-transform: uppercase;
+    font-family: arial;
+    color:#b3e5d3;
+    animation: text-switch 5s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes text-switch{
+    
+    33%  {content: " norwegian wood";}
+    66% {content: " sputnik sweetheart";}
+    100% {content: " kafka on the shore";}
+}
+

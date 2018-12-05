@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #262626;
+}
+h1{
+    color: white;
+    font-size: 110px;
+    padding: 40px;
+}
+.heart{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #ff3838;
+    transform: rotate(45deg);
+    animation: heartbeat 1.4s linear infinite;
+    margin-left:20px; 
+}
+.heart::before,
+.heart::after{
+    content: " ";
+    top:0;
+    left: 0;
+    position: absolute;
+    background-color: #ff3838;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+.heart::before{
+  
+    transform: translateY(-50%);
+}
+.heart::after{
+    transform: translateX(-50%);
+}
+@keyframes heartbeat{
+    0% {transform: rotate(45deg) scale(1);}
+    25% {transform: rotate(45deg) scale(1);}
+    30% {transform: rotate(45deg) scale(1.4);}
+    50% {transform: rotate(45deg) scale(1.2);}
+    70% {transform: rotate(45deg) scale(1.4);}
+    100% {transform: rotate(45deg) scale(1);}
+}
+
+/* FOR TEXT-SWITCH */
+
+
+span::before{
+    content: "Coding";
+    text-transform: uppercase;
+    font-family: arial;
+    color:white;
+    animation: text-switch 12s linear infinite;
+    animation-delay: 2s;
+    margin-left: 20px;
+}
+@keyframes text-switch{
+    
+    30%  {content: "Travel";}
+    50% {content: "Books";}
+    70% {content: "Music";}
+    100% {content: "Ghost";}
+}
